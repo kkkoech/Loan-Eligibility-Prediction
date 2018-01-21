@@ -1,0 +1,17 @@
+Data
+
+Variable            Description                     Type of Variable/VariableCategory 
+
+Loan_ID             Unique Loan ID                    #####       
+Gender              Male/ Female                      Predictor,Character,Categorical 
+Married             Applicant married (Y/N)           Predictor,Character,Categorical
+Dependents          Number of dependents              Predictor,Numeric,Continuous
+Education           (Graduate/UnderGraduate)          Predictor,Character,Categorical
+Self_Employed       Self employed (Y/N)               Predictor,Character,Categorical
+ApplicantIncome     Applicant income                  Predictor,Numeric,Continuous
+CoapplicantIncome   Coapplicant income                Predictor,Numeric,Continuous
+LoanAmount          Loan amount in thousands          Predictor,Numeric,Continuous
+Loan_Amount_Term    Term of loan in months            Predictor,Numeric,Continuous
+Credit_History      credit history meets guidelines   Predictor,Numeric,?
+Property_Area       Urban/ Semi Urban/ Rural          Predictor,Character,Continuous
+Loan_Status         Loan approved (Y/N)               Target Variable,Numeric,Continuous
