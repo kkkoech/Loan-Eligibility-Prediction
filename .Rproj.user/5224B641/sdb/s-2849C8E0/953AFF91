@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "train <- read.csv(\"data/train.csv\", header=T, na.strings =c(\"\",\"NA\")) #the na.strings(..) converts blanks to NA's\ntest <- read.csv(\"data/test.csv\", header=T, na.strings = c(\"\",\"NA\"))\n\nsummary(train_set)\n\n#Missing observations?\nsapply(train, function(x){sum(is.na(x))})\nsapply(test, function(x){sum(is.na(x))})\n\n#Missing observations \ntest[is.na(train$Gender),]\n#Imputing Missing observations using Mice() package\nlibrary(mice)\n\n#Pattern for missing data\nmd.pattern(train)\n#Visual pattern for missing data \nlibrary(VIM)\naggr(train, col=c('navyblue','red'), numbers=TRUE, sortVars=TRUE, labels=names(data), \n     cex.axis=.5, gap=.1, ylab=c(\"Histogram of missing data\",\"Pattern\"))\n#Imputing missing data\ntempData <- mice(train,m=5,maxit=5,meth='sample') #My seed = is Default\nsummary(tempData)\n\n#How do the imputed observations look?\ntempData$imp$Gender\ntempData$imp$Married\ntempData$imp$Dependents\ntempData$imp$Self_Employed\n\n#Importing Imputed data\ncompleteData <- complete(tempData,4) #I'm using the 4th dataset. Seems like an average of the 5.\n\n#How does does distribution of imputed data differ from original observations?\nxyplot(tempData,Gender ~ Married+Dependents+Self_Employed+LoanAmount,pch=18,cex=1)\n\n#Or\ndensityplot(tempData)\nstripplot(tempData, pch = 20, cex = 1.0)\n\n#Pooling. Fitting a model from each of the imputed dataset and pooling results together\n#mice_model <- with(completeData,lm(Loan_Status~Gender+Married+Dependents+Education\n#                               +Self_Employed+ApplicantIncome+CoapplicantIncome+LoanAmount+Loan_Amount_Term+\n#                                 Credit_History+Property_Area+Loan_Status))\n#summary(pool(mice_model))\n\n\n",
+    "created" : 1516642884211.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1219945011",
+    "id" : "953AFF91",
+    "lastKnownWriteTime" : 1516654982,
+    "last_content_update" : 1516654982935,
+    "path" : "~/GitHub/Loan-Eligibility-Prediction/feature-engineering.R",
+    "project_path" : "feature-engineering.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
