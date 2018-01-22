@@ -30,3 +30,6 @@ tempData$imp$Self_Employed
 
 #Importing Imputed data
 completeData <- complete(tempData,4) #I'm using the 4th dataset. Seems like an average of the 5.
+
+#How does does distribution of imputed data differ from original observations?
+xyplot(tempData,Gender ~ Married+Dependents+Self_Employed+LoanAmount,pch=18,cex=1)

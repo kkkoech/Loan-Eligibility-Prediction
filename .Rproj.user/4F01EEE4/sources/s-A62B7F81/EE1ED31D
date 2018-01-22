@@ -8,12 +8,12 @@
     "hash" : "0",
     "id" : "EE1ED31D",
     "lastKnownWriteTime" : 1516329126,
-    "last_content_update" : 1516488921852,
+    "last_content_update" : 1516574245330,
     "path" : "~/Desktop/Loan-Eligibility-Prediction/feature-engineering.R",
     "project_path" : "feature-engineering.R",
     "properties" : {
-        "cursorPosition" : "32,0",
-        "scrollLine" : "10",
+        "cursorPosition" : "35,0",
+        "scrollLine" : "13",
         "tempName" : "Untitled1"
     },
     "relative_order" : 1,
