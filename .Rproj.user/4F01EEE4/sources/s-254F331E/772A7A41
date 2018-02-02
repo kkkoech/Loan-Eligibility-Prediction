@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1516673069847.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "772A7A41",
+    "lastKnownWriteTime" : 1517245094,
+    "last_content_update" : 1517245094375,
+    "path" : "~/Desktop/Loan-Eligibility-Prediction/imputations.R",
+    "project_path" : "imputations.R",
+    "properties" : {
+        "cursorPosition" : "29,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

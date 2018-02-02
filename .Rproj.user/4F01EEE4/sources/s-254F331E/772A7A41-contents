@@ -43,5 +43,5 @@ stripplot(tempData, pch = 20, cex = 1.0)
 #                               +Self_Employed+ApplicantIncome+CoapplicantIncome+LoanAmount+Loan_Amount_Term+
 #                                 Credit_History+Property_Area+Loan_Status))
 #summary(pool(mice_model))
-
-
+save.image(file="EnvironmentData.R")
+load("EnvironmentData.R")

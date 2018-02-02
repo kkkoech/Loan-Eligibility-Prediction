@@ -33,3 +33,15 @@ completeData <- complete(tempData,4) #I'm using the 4th dataset. Seems like an a
 
 #How does does distribution of imputed data differ from original observations?
 xyplot(tempData,Gender ~ Married+Dependents+Self_Employed+LoanAmount,pch=18,cex=1)
+
+#Or
+densityplot(tempData)
+stripplot(tempData, pch = 20, cex = 1.0)
+
+#Pooling. Fitting a model from each of the imputed dataset and pooling results together
+#mice_model <- with(completeData,lm(Loan_Status~Gender+Married+Dependents+Education
+#                               +Self_Employed+ApplicantIncome+CoapplicantIncome+LoanAmount+Loan_Amount_Term+
+#                                 Credit_History+Property_Area+Loan_Status))
+#summary(pool(mice_model))
+save.image(file="EnvironmentData.R")
+load("EnvironmentData.R")
