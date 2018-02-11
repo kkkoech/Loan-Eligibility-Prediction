@@ -23,6 +23,7 @@ tempData <- mice(train,m=5,maxit=5,meth='sample') #My seed = is Default
 summary(tempData)
 
 #How do the imputed observations look?
+
 tempData$imp$Gender
 tempData$imp$Married
 tempData$imp$Dependents
@@ -39,9 +40,9 @@ densityplot(tempData)
 stripplot(tempData, pch = 20, cex = 1.0)
 
 #Pooling. Fitting a model from each of the imputed dataset and pooling results together
-#mice_model <- with(completeData,lm(Loan_Status~Gender+Married+Dependents+Education
-#                               +Self_Employed+ApplicantIncome+CoapplicantIncome+LoanAmount+Loan_Amount_Term+
-#                                 Credit_History+Property_Area+Loan_Status))
+mice_model <- with(completeData,lm(Loan_Status~Gender+Married+Dependents+Education
+                               +Self_Employed+ApplicantIncome+CoapplicantIncome+LoanAmount+Loan_Amount_Term+
+                                 Credit_History+Property_Area+Loan_Status))
 #summary(pool(mice_model))
 save.image(file="EnvironmentData.R")
 load("EnvironmentData.R")

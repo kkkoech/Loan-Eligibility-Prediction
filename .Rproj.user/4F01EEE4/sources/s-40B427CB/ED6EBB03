@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1517942831883.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "834482675",
+    "id" : "ED6EBB03",
+    "lastKnownWriteTime" : 1518364646,
+    "last_content_update" : 1518364646303,
+    "path" : "~/Desktop/Loan-Eligibility-Prediction/solution_loan_eligibility_prediction.R",
+    "project_path" : "solution_loan_eligibility_prediction.R",
+    "properties" : {
+        "cursorPosition" : "0,73",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
